@@ -1,163 +1,250 @@
-.lead {
-  font-size: 0.95rem;
-  text-align: left;
+/* Layout follows the academic homepage template popularised by Jon Barron. */
+
+a {
+  color: #1772d0;
+  text-decoration: none;
 }
 
-.subtitle {
-  font-size: 1.7rem;
-  text-align: left;
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
 }
 
-.title {
-  font-size: 2.2rem;
-  text-align: left;
+body,
+td,
+th,
+tr,
+p,
+li,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-.ttitle {
-  font-size: 1.2rem;
-  text-align: left;
+body {
+  margin-bottom: 40px;
 }
 
-.profile {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 10px;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
 }
 
-.vcenter {
-  margin-top: auto;
-  margin-bottom: auto;
+.name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  margin: 0;
 }
 
-.teaser {
-  /* one uniform card per paper: figures keep their aspect ratio inside it */
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
-  background: #fff;
-  padding: 6px;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px 0;
+.position {
+  color: #666;
+  margin: 2px 0 0 0;
+}
+
+h4 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  margin: 0;
+}
+
+.papertitle {
+  font-weight: 700;
 }
 
 .highlight {
-  color: red;
+  color: #c1272d;
 }
 
-.news-item {
-  display: flex;
-  margin-bottom: 0.25rem;
-  align-items: baseline;
+.common-rows {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.date-label {
-  display: flex;
-  flex: 0 0 5.2em;
-  font-weight: bold;
-  margin-right: 0.5rem;
+.section-heading-rows {
+  margin-top: 26px;
+  margin-bottom: 10px;
 }
 
-.date-month {
-  width: 1.3em;
-  text-align: left;
-}
+/* ---- header: name and institute logos ---------------------------------- */
 
-.date-separator {
-  width: 1em;
-  text-align: center;
-  font-weight: normal;
-}
-
-.date-year {
-  width: 3.5em;
+.institute-logos {
   text-align: right;
+  margin: 0;
 }
 
-.date-year-wide {
-  width: auto; /* an open-ended date like "Present" sits right after the dash */
-  text-align: left;
+.institute-logo-davian {
+  width: 108px;
+  margin-right: 22px;
 }
 
-.work-experience .date-label {
-  flex: 0 0 11em;
+.institute-logo-kaistai {
+  width: 122px;
 }
 
-.pub {
-  margin-bottom: 0.9rem;
+/* ---- intro: text beside a circular photo -------------------------------- */
+
+.personal-column {
+  margin: auto;
+}
+
+.personal-photo {
+  width: 90%;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  clip-path: circle();
 }
 
 .links {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0.4rem;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .links a {
   display: inline-flex;
   align-items: center;
-  margin-right: 1rem;
   white-space: nowrap;
 }
 
 .links svg {
-  width: 1em;
-  height: 1em;
+  width: 14px;
+  height: 14px;
   margin-right: 0.35em;
   fill: currentColor;
   flex-shrink: 0;
 }
 
-.sub {
-  color: #6c757d;
+.links .sep {
+  color: #999;
+  padding: 0 0.5em;
 }
 
-.work-row {
-  margin-bottom: 1.1rem;
-}
+/* ---- publications and projects ------------------------------------------ */
 
-.work-logo-col {
+.pub-row {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.pub-fig-col {
+  display: flex;
+  flex: 0 0 31%;
+  max-width: 31%;
   align-items: center;
   justify-content: center;
 }
 
-.work-logo {
-  max-width: 100%;
-  max-height: 32px;
+.pub-text-col {
+  flex: 0 0 69%;
+  max-width: 69%;
+  padding-left: 18px;
 }
 
-.work-head {
+.paper-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  /* contain, not cover: these are paper figures, cropping them loses content */
+  object-fit: contain;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- work experience and education -------------------------------------- */
+
+.entry-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 14px 0;
+}
+
+.entry-logo-col {
+  display: flex;
+  flex: 0 0 22%;
+  max-width: 22%;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry-text-col {
+  flex: 0 0 78%;
+  max-width: 78%;
+  padding-left: 18px;
+}
+
+.entry-logo {
+  max-width: 100%;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+.entry-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.work-meta {
-  color: #6c757d;
+.entry-meta {
+  color: #888;
   white-space: nowrap;
-  padding-left: 0.5rem;
+  padding-left: 0.5em;
 }
 
-.work-items {
-  padding-left: 1.1rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0;
+.entry-text-col ul {
+  margin: 0.4em 0 0 0;
+  padding-left: 1.1em;
 }
 
-.pub-row {
-  margin-bottom: 0.5rem;
+.footer-note {
+  text-align: right;
+  font-size: small;
+  color: #999;
+  margin-top: 36px;
 }
 
-.pub-fig-col {
-  display: flex;
-  align-items: center;
-}
+/* ---- narrow screens ------------------------------------------------------ */
 
-.edu-logo {
-  max-width: 100%;
-  max-height: 58px; /* the square KAIST seal needs the height a wordmark gets from width */
+@media screen and (max-width: 576px) {
+  .institute-logos {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .personal-photo {
+    width: 80%;
+    max-width: 200px;
+    padding: 10px 0;
+  }
+
+  .pub-row,
+  .entry-row {
+    display: block;
+  }
+
+  .pub-fig-col,
+  .pub-text-col,
+  .entry-logo-col,
+  .entry-text-col {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-left: 0;
+  }
+
+  .paper-image {
+    max-width: 260px;
+    margin: 0 auto 12px auto;
+  }
+
+  .entry-logo {
+    margin-bottom: 10px;
+  }
 }
