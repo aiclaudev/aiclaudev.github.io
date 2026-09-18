@@ -98,3 +98,7 @@
   fill: currentColor;
   flex-shrink: 0;
 }
+
+.sub {
+  color: #6c757d;
+}
