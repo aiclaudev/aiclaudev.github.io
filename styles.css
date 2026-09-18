@@ -1,0 +1,75 @@
+.lead {
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 1.7rem;
+  text-align: left;
+}
+
+.title {
+  font-size: 2.2rem;
+  text-align: left;
+}
+
+.ttitle {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.profile {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.vcenter {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.teaser {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.highlight {
+  color: red;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: 0.25rem;
+  align-items: baseline;
+}
+
+.date-label {
+  display: flex;
+  flex: 0 0 5.2em;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.date-month {
+  width: 1.3em;
+  text-align: left;
+}
+
+.date-separator {
+  width: 1em;
+  text-align: center;
+  font-weight: normal;
+}
+
+.date-year {
+  width: 3.5em;
+  text-align: right;
+}
+
+.work-experience .date-label {
+  flex: 0 0 11em;
+}
