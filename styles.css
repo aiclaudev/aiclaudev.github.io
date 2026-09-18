@@ -70,6 +70,11 @@
   text-align: right;
 }
 
+.date-year-wide {
+  width: auto; /* an open-ended date like "Present" sits right after the dash */
+  text-align: left;
+}
+
 .work-experience .date-label {
   flex: 0 0 11em;
 }

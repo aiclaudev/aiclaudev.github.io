@@ -33,7 +33,12 @@ function addWorkItem(containerId, startMonth, startYear, endMonth, endYear, html
   dateLabel.appendChild(createSpan(startMonth, 'date-month'));
   dateLabel.appendChild(createSpan(startYear, 'date-year'));
   dateLabel.appendChild(createSpan('–', 'date-separator'));
-  dateLabel.appendChild(createSpan(endMonth, 'date-month'));
-  dateLabel.appendChild(createSpan(endYear, 'date-year'));
+  if (endMonth) {
+    dateLabel.appendChild(createSpan(endMonth, 'date-month'));
+    dateLabel.appendChild(createSpan(endYear, 'date-year'));
+  } else {
+    // no end month (e.g. "Present"): one span, so no empty month cell opens a gap
+    dateLabel.appendChild(createSpan(endYear, 'date-year date-year-wide'));
+  }
   appendItem(containerId, dateLabel, htmlContent);
 }
