@@ -118,10 +118,6 @@
   max-height: 32px;
 }
 
-.work-logo-sm {
-  max-height: 26px;
-}
-
 .work-head {
   display: flex;
   justify-content: space-between;
