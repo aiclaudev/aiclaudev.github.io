@@ -152,5 +152,5 @@
 
 .edu-logo {
   max-width: 100%;
-  max-height: 42px;
+  max-height: 58px; /* the square KAIST seal needs the height a wordmark gets from width */
 }
