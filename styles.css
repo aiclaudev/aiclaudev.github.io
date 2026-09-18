@@ -77,3 +77,24 @@
 .pub {
   margin-bottom: 0.9rem;
 }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.links svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.35em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
