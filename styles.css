@@ -32,9 +32,16 @@
 }
 
 .teaser {
+  /* one uniform card per paper: figures keep their aspect ratio inside it */
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
+  border: 1px solid #e9ecef;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .highlight {
