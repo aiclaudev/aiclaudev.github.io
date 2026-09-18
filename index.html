@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="styles.css?v=3">
+  <link rel="stylesheet" type="text/css" href="styles.css?v=4">
   <script src="./sources/functions.js"></script>
 </head>
 
@@ -31,7 +31,7 @@
                 KAIST AI<br>
                 aiclaudev@gmail.com</h3>
               <div class="links">
-                <a href="./assets/cv_dohyunlee.pdf?v=7">
+                <a href="./assets/cv_dohyunlee.pdf?v=8">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>CV</a>
                 <a href="https://scholar.google.com/citations?user=4OKODEcAAAAJ">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>Google Scholar</a>
@@ -161,15 +161,50 @@
           <p class="lead">* denotes equal contribution.</p>
         </div>
 
-        <!-- Work Experience -->
+        <!-- Research Experience -->
         <hr>
         <div>
           <h3 class="subtitle">Research Experience</h3>
-          <div class="lead work-experience" id="work-container"></div>
-          <script>
-            addWorkItem('work-container', 'Nov.', '2024', 'Feb.', '2026', 'KRAFTON, Research Intern (AI Companion Team) &mdash; researched and developed PUBG Ally, <a href="https://www.youtube.com/watch?v=91jt3Hyp9SY">showcased at CES 2025</a> with NVIDIA and <a href="https://www.nvidia.com/en-us/geforce/news/pubg-ally-ai-teammate-beta-available-now/">beta-launched</a> in PUBG: BATTLEGROUNDS.');
-            addWorkItem('work-container', 'Jul.', '2022', 'Aug.', '2022', 'Hyundai Motor Company, Undergraduate NLP Researcher');
-          </script>
+
+          <div class="row work-row">
+            <div class="col-3 col-sm-2 work-logo-col">
+              <a href="https://www.krafton.ai/"><img src="images/logo_krafton.png" alt="KRAFTON AI" class="work-logo"></a>
+            </div>
+            <div class="col-9 col-sm-10 lead">
+              <div class="work-head">
+                <span class="font-weight-bold">KRAFTON AI</span>
+                <span class="work-meta">Nov. 2024 &ndash; Feb. 2026</span>
+              </div>
+              <div class="work-head">
+                <span>Research Intern, AI Companion Team</span>
+                <span class="work-meta">Seoul, Korea</span>
+              </div>
+              <ul class="work-items">
+                <li>Built an AI co-playable character (CPC) for PUBG Ally on top of LLM/VLM-based agent systems.
+                  <a href="https://www.youtube.com/watch?v=wEKUSMqrbzQ">[demo]</a></li>
+                <li>PUBG Ally was showcased at
+                  <a href="https://www.youtube.com/watch?v=91jt3Hyp9SY">CES 2025</a> in collaboration with NVIDIA, and
+                  <a href="https://www.nvidia.com/en-us/geforce/news/pubg-ally-ai-teammate-beta-available-now/">beta-launched</a>
+                  in PUBG: BATTLEGROUNDS.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row work-row">
+            <div class="col-3 col-sm-2 work-logo-col">
+              <a href="https://www.hyundai.com/worldwide/en"><img src="images/logo_hyundai.svg" alt="Hyundai Motor Company" class="work-logo work-logo-sm"></a>
+            </div>
+            <div class="col-9 col-sm-10 lead">
+              <div class="work-head">
+                <span class="font-weight-bold">Hyundai Motor Company</span>
+                <span class="work-meta">Jul. 2022 &ndash; Aug. 2022</span>
+              </div>
+              <div class="work-head">
+                <span>Undergraduate NLP Researcher</span>
+                <span class="work-meta">Seoul, Korea</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Education -->
