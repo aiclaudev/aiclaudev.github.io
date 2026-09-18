@@ -73,3 +73,7 @@
 .work-experience .date-label {
   flex: 0 0 11em;
 }
+
+.pub {
+  margin-bottom: 0.9rem;
+}

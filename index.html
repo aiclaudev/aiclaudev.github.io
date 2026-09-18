@@ -27,12 +27,14 @@
           <div class="col vcenter">
             <header>
               <h3 class="title">Dohyun Lee</h3>
-              <!-- Add position / affiliation lines above the email, separated by <br> -->
               <h3 class="ttitle">
+                Ph.D. Student<br>
+                KAIST AI<br>
                 aiclaudev@gmail.com</h3>
               <div class="links">
-                <!-- Add [Google Scholar], [CV] (put the pdf in ./assets/) as needed -->
+                <a href="https://scholar.google.com/citations?user=4OKODEcAAAAJ">[Google Scholar]</a>
                 <a href="https://github.com/aiclaudev">[Github]</a>
+                <a href="https://www.linkedin.com/in/aiclaudev">[LinkedIn]</a>
               </div>
             </header>
           </div>
@@ -43,11 +45,21 @@
         <div>
           <h3 class="subtitle">About Me</h3>
           <p class="lead">
-            I studied Mechanical Engineering and Software Convergence (Data Science track) at
-            <a href="https://www.khu.ac.kr/eng/">Kyung Hee University</a>.
-            My interests are in artificial intelligence, including deep neural network architectures,
-            computer vision, and natural language processing with large language models,
-            and in applying them to fields such as healthcare, finance, and robotics.
+            I am a Ph.D. student at the
+            <a href="https://davian.kaist.ac.kr/">Data and Visual Analytics Lab (DAVIAN)</a>
+            in KAIST AI, advised by Professor
+            <a href="https://sites.google.com/site/jaegulchoo">Jaegul Choo</a>.
+            Previously, I was a research intern at KRAFTON.
+          </p>
+          <p class="lead">
+            My current research interest lies in how robots can build and use an understanding of the 3D world
+            to manipulate objects and act in real environments. My research centers on two directions.
+            First, while building PUBG Ally at KRAFTON, I saw first-hand that vision-language models understand
+            complex 3D scenes remarkably well, and I now aim to bring this capability to robot manipulation
+            through explicit 3D spatial reasoning.
+            Second, video is another rich source of 3D world understanding. I believe that video generation is
+            essentially representation learning for the 3D world and its dynamics, and I am currently studying
+            what learning objectives yield good representations for world action models.
           </p>
         </div>
 
@@ -62,39 +74,87 @@
         </div>
         -->
 
-        <!-- Publications: uncomment and copy the row per paper. For a video teaser, swap the <img> for
-             <video class="teaser figure-img img-fluid" muted loop playsinline autoplay preload="metadata" src="..."></video>
+        <!-- Publications. To add a teaser image/video next to a paper, wrap it like:
+             <div class="row"><div class="col-sm-4"><img src="research/teaser/xxx.png" alt="" class="teaser figure-img img-fluid"></div>
+             <div class="col vcenter"> ...the <p> below... </div></div> -->
         <hr>
         <div>
-          <h3 class="subtitle">Selected Publications</h3>
-          <div class="row">
-            <div class="col-sm-4">
-              <img src="research/teaser/placeholder.svg" alt="" class="teaser figure-img img-fluid">
-            </div>
-            <div class="col vcenter">
-              <p class="lead">
-                <span class="font-weight-bold">
-                  <span class="highlight">[NEW]</span>
-                  Paper Title
-                </span><br>
-                First Author*, <span class="font-weight-bold">Dohyun Lee*</span>, and Last Author<br>
-                <i>Conference 2026, City, Country.</i><br>
-                <a href="https://...">[Paper]</a>
-                <a href="https://...">[Code]</a>
-                <a href="https://...">[Project Page]</a>
-              </p>
-            </div>
-          </div>
+          <h3 class="subtitle">Publications</h3>
+          <p class="lead pub">
+            <span class="font-weight-bold">Procedural Memory for Proactive Robot Assistance</span><br>
+            <span class="font-weight-bold">D. Lee*</span>, M. Park*, J. Park, D. Hwang, J. Hyung, S. Hwang, B. Lee, and J. Choo<br>
+            <i>CoRL 2026.</i>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">PersonaTrail: Benchmarking Personalized Web Agents through Browsing Trails</span><br>
+            S. Yang, C. Ki, <span class="font-weight-bold">D. Lee</span>, J. Choo, and C. Park<br>
+            <i>arXiv 2026.</i>
+            <a href="https://arxiv.org/abs/2607.20482">[Paper]</a>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">Delving into Large Language Models for Effective Time-Series Anomaly Detection</span><br>
+            J. Park, K. Jung, <span class="font-weight-bold">D. Lee</span>, H. Lee, D. Gwak, C. Park, J. Choo, and J. Cho<br>
+            <i>NeurIPS 2025.</i>
+            <a href="https://openreview.net/forum?id=6rpy7X1Of8">[Paper]</a>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">Opt-Out: Investigating Entity-Level Unlearning for Large Language Models via Optimal Transport</span><br>
+            M. Choi, D. Rim, <span class="font-weight-bold">D. Lee</span>, and J. Choo<br>
+            <i>ACL 2025.</i>
+            <a href="https://arxiv.org/abs/2406.12329">[Paper]</a>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">Revisiting LLMs as Zero-Shot Time Series Forecasters: Small Noise Can Break Large Models</span><br>
+            J. Park, H. Lee, <span class="font-weight-bold">D. Lee</span>, D. Gwak, and J. Choo<br>
+            <i>ACL 2025.</i>
+            <a href="https://arxiv.org/abs/2506.00457">[Paper]</a>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">Exploring In-context Example Generation for Machine Translation</span><br>
+            <span class="font-weight-bold">D. Lee</span>, S. Lee, C. Yang, Y. Baek, and J. Choo<br>
+            <i>Findings of ACL 2025.</i>
+            <a href="https://arxiv.org/abs/2506.00507">[Paper]</a>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">Breaking Chains: Unraveling the Links in Multi-Hop Knowledge Unlearning</span><br>
+            M. Choi, C. Park, <span class="font-weight-bold">D. Lee</span>, and J. Choo<br>
+            <i>arXiv 2024.</i>
+            <a href="https://arxiv.org/abs/2410.13274">[Paper]</a>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">PairEval: Open-domain Dialogue Evaluation with Pairwise Comparison</span><br>
+            C. Park, M. Choi, <span class="font-weight-bold">D. Lee</span>, and J. Choo<br>
+            <i>COLM 2024.</i>
+            <a href="https://arxiv.org/abs/2404.01015">[Paper]</a>
+          </p>
+          <p class="lead pub">
+            <span class="font-weight-bold">Protecting Privacy Through Approximating Optimal Parameters for Sequence Unlearning in Language Models</span><br>
+            <span class="font-weight-bold">D. Lee*</span>, D. Rim*, M. Choi, and J. Choo<br>
+            <i>Findings of ACL 2024.</i>
+            <a href="https://arxiv.org/abs/2406.14091">[Paper]</a>
+          </p>
+          <p class="lead">* denotes equal contribution.</p>
         </div>
-        -->
 
         <!-- Work Experience -->
         <hr>
         <div>
-          <h3 class="subtitle">Work Experience</h3>
+          <h3 class="subtitle">Research Experience</h3>
           <div class="lead work-experience" id="work-container"></div>
           <script>
-            addWorkItem('work-container', 'Jul.', '2022', 'Aug.', '2022', 'Hyundai Motor Company, NLP Intern');
+            addWorkItem('work-container', 'Nov.', '2024', 'Feb.', '2026', 'KRAFTON, Research Intern (AI Companion Team) &mdash; researched and developed PUBG Ally, <a href="https://www.youtube.com/watch?v=91jt3Hyp9SY">showcased at CES 2025</a> with NVIDIA and <a href="https://www.nvidia.com/en-us/geforce/news/pubg-ally-ai-teammate-beta-available-now/">beta-launched</a> in PUBG: BATTLEGROUNDS.');
+            addWorkItem('work-container', 'Jul.', '2022', 'Aug.', '2022', 'Hyundai Motor Company, Undergraduate NLP Researcher');
+          </script>
+        </div>
+
+        <!-- Education -->
+        <hr>
+        <div>
+          <h3 class="subtitle">Education</h3>
+          <div class="lead work-experience" id="edu-container"></div>
+          <script>
+            addWorkItem('edu-container', 'Sep.', '2023', '', 'Present', 'KAIST, Integrated M.S./Ph.D. in Artificial Intelligence (Advisor: Prof. Jaegul Choo)');
+            addWorkItem('edu-container', 'Mar.', '2017', 'Aug.', '2023', 'Kyung Hee University, B.S. in Mechanical Engineering and Software Engineering');
           </script>
         </div>
 
