@@ -140,3 +140,17 @@
   margin-top: 0.2rem;
   margin-bottom: 0;
 }
+
+.pub-row {
+  margin-bottom: 0.5rem;
+}
+
+.pub-fig-col {
+  display: flex;
+  align-items: center;
+}
+
+.edu-logo {
+  max-width: 100%;
+  max-height: 42px;
+}
