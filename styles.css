@@ -78,17 +78,15 @@ h4 {
 }
 
 .institute-logos img {
+  /* equal height: both marks devote the same share of it to their wordmark,
+     so the lettering comes out the same size */
   display: block;
+  height: 32px;
   width: auto;
 }
 
 .institute-logo-davian {
-  height: 36px;
-  margin-right: 26px;
-}
-
-.institute-logo-kaistai {
-  height: 32px;
+  margin-right: 28px;
 }
 
 /* ---- intro: text beside a circular photo -------------------------------- */
