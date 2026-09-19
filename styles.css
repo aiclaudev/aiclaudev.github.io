@@ -70,17 +70,25 @@ h4 {
 /* ---- header: name and institute logos ---------------------------------- */
 
 .institute-logos {
-  text-align: right;
+  /* flex, not inline images: baseline alignment would stagger two logos of different heights */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   margin: 0;
 }
 
+.institute-logos img {
+  display: block;
+  width: auto;
+}
+
 .institute-logo-davian {
-  width: 108px;
-  margin-right: 22px;
+  height: 36px;
+  margin-right: 26px;
 }
 
 .institute-logo-kaistai {
-  width: 122px;
+  height: 32px;
 }
 
 /* ---- intro: text beside a circular photo -------------------------------- */
@@ -215,7 +223,7 @@ h4 {
 
 @media screen and (max-width: 576px) {
   .institute-logos {
-    text-align: center;
+    justify-content: center;
     margin-top: 10px;
   }
 
