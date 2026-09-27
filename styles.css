@@ -276,7 +276,7 @@ h4 {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -319,31 +319,80 @@ details[open] > .leg-title .leg-chevron {
   color: var(--leg);
 }
 
+/* the route: one straight track down the middle, stops either side of it */
 .stops {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+}
+
+.stops::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  bottom: 4px;
+  width: 7px;
+  margin-left: -3.5px;
+  border-radius: 4px;
+  background: #e4e9ef;
+}
+
+.stops::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  margin-left: -1px;
+  background: repeating-linear-gradient(#fff 0 7px, transparent 7px 16px);
 }
 
 .stop {
-  padding: 9px 14px 11px 15px;
-  border: 1px solid #e7ebf0;
-  border-left: 4px solid var(--leg);
-  border-radius: 8px;
+  position: relative;
+  width: 50%;
+  padding: 0 32px 22px 0;
+  text-align: right;
+}
+
+.stop:nth-child(even) {
+  margin-left: 50%;
+  padding: 0 0 22px 32px;
+  text-align: left;
+}
+
+.stop:last-child {
+  padding-bottom: 0;
+}
+
+.stop::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -6.5px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--leg);
+  /* the white ring lifts the stop clear of the track */
+  box-shadow: 0 0 0 3.5px #fff;
+}
+
+.stop:nth-child(even)::before {
+  right: auto;
+  left: -6.5px;
+}
+
+/* milestones are hollow so papers stay the primary stops — shape, not colour */
+.stop-mile::before {
   background: #fff;
+  border: 3px solid var(--leg);
 }
 
-/* milestones read as quieter cards — texture and tone, not colour */
-.stop-mile {
-  border-left-style: dashed;
-  background: #fafbfc;
-}
-
-.stop-now {
-  box-shadow: 0 1px 4px rgba(16, 66, 129, 0.12);
+.stop-now::before {
+  box-shadow: 0 0 0 3.5px #fff, 0 0 0 7px rgba(16, 66, 129, 0.16);
 }
 
 .stop-when {
@@ -375,6 +424,7 @@ details[open] > .leg-title .leg-chevron {
   letter-spacing: 0.04em;
 }
 
+/* narrow screens: the track moves to the left edge and every stop lines up under it */
 @media screen and (max-width: 576px) {
   .leg-title {
     flex-wrap: wrap;
@@ -383,5 +433,25 @@ details[open] > .leg-title .leg-chevron {
 
   .leg-years {
     min-width: 0;
+  }
+
+  .stops::before,
+  .stops::after {
+    left: 7px;
+    margin-left: 0;
+  }
+
+  .stop,
+  .stop:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 20px 30px;
+    text-align: left;
+  }
+
+  .stop::before,
+  .stop:nth-child(even)::before {
+    right: auto;
+    left: 0.5px;
   }
 }
