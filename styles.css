@@ -257,10 +257,6 @@ h4 {
 
 /* ---- research journey ---------------------------------------------------- */
 
-.journey-lede {
-  margin-bottom: 18px;
-}
-
 .journey {
   list-style: none;
   margin: 0;
@@ -274,6 +270,29 @@ h4 {
 .leg-title {
   margin: 0 0 8px 0;
   font-weight: 700;
+  cursor: pointer;
+  list-style: none;          /* our own chevron replaces the disclosure marker */
+}
+
+.leg-title::-webkit-details-marker {
+  display: none;
+}
+
+.leg-title:hover .leg-years,
+.leg-title:focus-visible .leg-years {
+  color: #f09228;
+}
+
+.leg-chevron {
+  display: inline-block;
+  width: 9px;
+  margin-right: 7px;
+  color: var(--leg);
+  transition: transform 0.15s ease;
+}
+
+details[open] > .leg-title .leg-chevron {
+  transform: rotate(90deg);
 }
 
 .leg-years {
@@ -332,6 +351,23 @@ h4 {
 
 .stop-what {
   display: block;
+}
+
+/* papers led by me: a text badge plus weight, never colour alone */
+.stop-mine .stop-what {
+  font-weight: 700;
+}
+
+.stop-lead {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 6px;
+  border: 1px solid #cfe0f7;
+  border-radius: 9px;
+  background: #eaf1fb;
+  color: #104281;
+  font-size: 10px;
+  letter-spacing: 0.04em;
 }
 
 @media screen and (max-width: 576px) {
