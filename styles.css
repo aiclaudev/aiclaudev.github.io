@@ -414,7 +414,9 @@ details[open] > .leg-title .leg-chevron {
 }
 
 .stop-now::before {
-  box-shadow: 0 0 0 3.5px #fff, 0 0 0 7px rgba(16, 66, 129, 0.16);
+  box-shadow: 0 0 0 3.5px #fff, 0 0 0 7px rgba(23, 114, 208, 0.16);
+  /* the halo follows whichever leg the current stop sits in */
+  box-shadow: 0 0 0 3.5px #fff, 0 0 0 7px color-mix(in srgb, var(--leg) 20%, transparent);
 }
 
 .stop-when {
