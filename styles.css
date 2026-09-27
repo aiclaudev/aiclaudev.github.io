@@ -331,7 +331,7 @@ details[open] > .leg-title .leg-chevron {
   content: "";
   position: absolute;
   left: 50%;
-  top: 17px;
+  top: 8px;
   bottom: 4px;
   width: 7px;
   margin-left: -3.5px;
@@ -393,7 +393,7 @@ details[open] > .leg-title .leg-chevron {
 .stop:first-child::after {
   content: "";
   position: absolute;
-  top: -25px;
+  top: -21px;
   right: -7px;
   box-sizing: border-box;
   width: 14px;
