@@ -331,26 +331,17 @@ details[open] > .leg-title .leg-chevron {
 .stops::before {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 7px;
   top: 8px;
   bottom: 4px;
   width: 4px;
-  margin-left: -2px;
   border-radius: 2px;
   background: var(--track);
 }
 
 .stop {
   position: relative;
-  width: 50%;
-  padding: 0 32px 22px 0;
-  text-align: right;
-}
-
-.stop:nth-child(even) {
-  margin-left: 50%;
-  padding: 0 0 22px 32px;
-  text-align: left;
+  padding: 0 0 22px 34px;
 }
 
 .stop:last-child {
@@ -361,18 +352,13 @@ details[open] > .leg-title .leg-chevron {
   content: "";
   position: absolute;
   top: 2px;
-  right: -6.5px;
+  left: 2.5px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background: var(--leg);
   /* the white ring lifts the stop clear of the track */
   box-shadow: 0 0 0 3.5px #fff;
-}
-
-.stop:nth-child(even)::before {
-  right: auto;
-  left: -6.5px;
 }
 
 /* the track runs on past the newest stop: an arrowhead caps each leg */
@@ -384,7 +370,7 @@ details[open] > .leg-title .leg-chevron {
   content: "";
   position: absolute;
   top: -21px;
-  right: -6px;
+  left: 3px;
   box-sizing: border-box;
   width: 12px;
   height: 12px;
@@ -425,7 +411,6 @@ details[open] > .leg-title .leg-chevron {
   padding: 7px 11px 9px;
   border: 1.5px solid transparent;
   border-radius: 8px;
-  text-align: inherit;
 }
 
 .stop-mine .stop-body {
@@ -454,29 +439,5 @@ details[open] > .leg-title .leg-chevron {
 
   .leg-years {
     min-width: 0;
-  }
-
-  .stops::before {
-    left: 7px;
-    margin-left: 0;
-  }
-
-  .stop,
-  .stop:nth-child(even) {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 0 20px 30px;
-    text-align: left;
-  }
-
-  .stop::before,
-  .stop:nth-child(even)::before {
-    right: auto;
-    left: 2.5px;
-  }
-
-  .stop:first-child::after {
-    right: auto;
-    left: 3px;
   }
 }
