@@ -331,7 +331,7 @@ details[open] > .leg-title .leg-chevron {
   content: "";
   position: absolute;
   left: 50%;
-  top: 4px;
+  top: 17px;
   bottom: 4px;
   width: 7px;
   margin-left: -3.5px;
@@ -343,7 +343,7 @@ details[open] > .leg-title .leg-chevron {
   content: "";
   position: absolute;
   left: 50%;
-  top: 12px;
+  top: 24px;
   bottom: 12px;
   width: 2px;
   margin-left: -1px;
@@ -385,26 +385,21 @@ details[open] > .leg-title .leg-chevron {
   left: -6.5px;
 }
 
-/* the track runs on past the newest stop: one arrowhead caps the top */
-.leg:first-child .stops {
-  padding-top: 18px;
+/* the track runs on past the newest stop: an arrowhead caps each leg */
+.stops {
+  padding-top: 30px;
 }
 
-.leg:first-child .stops::before,
-.leg:first-child .stops::after {
-  top: 17px;
-}
-
-.leg:first-child .stop:first-child::after {
+.stop:first-child::after {
   content: "";
   position: absolute;
-  top: -11px;
-  right: -7px;
+  top: -28px;
+  right: -9px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 10px solid #d3dae2;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 14px solid var(--leg);
 }
 
 /* milestones are hollow so papers stay the primary stops — shape, not colour */
@@ -486,11 +481,11 @@ details[open] > .leg-title .leg-chevron {
   .stop::before,
   .stop:nth-child(even)::before {
     right: auto;
-    left: 0.5px;
+    left: 4px;
   }
 
-  .leg:first-child .stop:first-child::after {
+  .stop:first-child::after {
     right: auto;
-    left: 0;
+    left: 1.5px;
   }
 }
