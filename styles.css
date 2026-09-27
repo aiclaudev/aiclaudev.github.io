@@ -385,6 +385,28 @@ details[open] > .leg-title .leg-chevron {
   left: -6.5px;
 }
 
+/* the track runs on past the newest stop: one arrowhead caps the top */
+.leg:first-child .stops {
+  padding-top: 18px;
+}
+
+.leg:first-child .stops::before,
+.leg:first-child .stops::after {
+  top: 17px;
+}
+
+.leg:first-child .stop:first-child::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid #d3dae2;
+}
+
 /* milestones are hollow so papers stay the primary stops — shape, not colour */
 .stop-mile::before {
   background: #fff;
@@ -407,9 +429,19 @@ details[open] > .leg-title .leg-chevron {
   display: block;
 }
 
-/* papers I led: a text badge plus weight, never colour alone */
-.stop-mine .stop-what {
-  font-weight: 700;
+/* every stop carries the box; only the ones I led paint it, so the
+   labels stay on the same line either way */
+.stop-body {
+  display: inline-block;
+  padding: 7px 11px 9px;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  text-align: inherit;
+}
+
+.stop-mine .stop-body {
+  border-color: var(--leg);
+  background: #f5f9fd;
 }
 
 .stop-lead {
@@ -453,5 +485,10 @@ details[open] > .leg-title .leg-chevron {
   .stop:nth-child(even)::before {
     right: auto;
     left: 0.5px;
+  }
+
+  .leg:first-child .stop:first-child::after {
+    right: auto;
+    left: 0;
   }
 }
