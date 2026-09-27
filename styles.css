@@ -264,31 +264,43 @@ h4 {
 }
 
 .leg {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 
+.leg:last-child {
+  margin-bottom: 0;
+}
+
+/* the year header doubles as the accordion toggle */
 .leg-title {
-  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px 0;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  list-style: none;          /* our own chevron replaces the disclosure marker */
+  list-style: none;
 }
 
 .leg-title::-webkit-details-marker {
   display: none;
 }
 
-.leg-title:hover .leg-years,
-.leg-title:focus-visible .leg-years {
-  color: #f09228;
+.leg-title::before {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 24px;
+  border-radius: 3px;
+  background: var(--leg);
 }
 
 .leg-chevron {
-  display: inline-block;
-  width: 12px;
-  margin-right: 8px;
-  color: var(--leg);
+  flex: none;
+  width: 10px;
+  font-size: 13px;
+  color: #a7b0ba;
   transition: transform 0.15s ease;
 }
 
@@ -296,50 +308,42 @@ details[open] > .leg-title .leg-chevron {
   transform: rotate(90deg);
 }
 
+.leg-title:hover .leg-years,
+.leg-title:focus-visible .leg-years {
+  color: #f09228;
+}
+
 .leg-years {
-  display: inline-block;
-  min-width: 132px;
+  flex: none;
+  min-width: 124px;
   color: var(--leg);
 }
 
 .stops {
   list-style: none;
   margin: 0;
-  /* the route itself */
-  padding: 2px 0 2px 22px;
-  border-left: 2px dashed #d5dbe2;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .stop {
-  position: relative;
-  padding-bottom: 13px;
-}
-
-.stop:last-child {
-  padding-bottom: 0;
-}
-
-.stop::before {
-  content: "";
-  position: absolute;
-  left: -28px;
-  top: 4px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--leg);
-  /* the white ring lifts the marker off the dashed route */
-  box-shadow: 0 0 0 3px #fff;
-}
-
-/* milestones are hollow so papers stay the primary stops — shape, not colour */
-.stop-mile::before {
+  padding: 9px 14px 11px 15px;
+  border: 1px solid #e7ebf0;
+  border-left: 4px solid var(--leg);
+  border-radius: 8px;
   background: #fff;
-  border: 2px solid var(--leg);
 }
 
-.stop-now::before {
-  box-shadow: 0 0 0 3px #fff, 0 0 0 6px rgba(16, 66, 129, 0.16);
+/* milestones read as quieter cards — texture and tone, not colour */
+.stop-mile {
+  border-left-style: dashed;
+  background: #fafbfc;
+}
+
+.stop-now {
+  box-shadow: 0 1px 4px rgba(16, 66, 129, 0.12);
 }
 
 .stop-when {
@@ -354,7 +358,7 @@ details[open] > .leg-title .leg-chevron {
   display: block;
 }
 
-/* papers led by me: a text badge plus weight, never colour alone */
+/* papers I led: a text badge plus weight, never colour alone */
 .stop-mine .stop-what {
   font-weight: 700;
 }
@@ -372,8 +376,12 @@ details[open] > .leg-title .leg-chevron {
 }
 
 @media screen and (max-width: 576px) {
+  .leg-title {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
   .leg-years {
-    display: block;
     min-width: 0;
   }
 }
