@@ -441,3 +441,27 @@ details[open] > .leg-title .leg-chevron {
     min-width: 0;
   }
 }
+
+/* ---- publications: Selected / All filter ------------------------------- */
+
+.pub-filter {
+  margin: 6px 0 0 0;
+}
+
+.pub-filter button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: #1772d0;
+  cursor: pointer;
+}
+
+.pub-filter button:focus,
+.pub-filter button:hover {
+  color: #f09228;
+}
+
+.pub-filter button[aria-pressed="true"] {
+  font-weight: 700;
+}

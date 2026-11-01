@@ -178,7 +178,12 @@
     <div class="row section-heading-rows">
       <h4>Publications</h4>
     </div>
-      <div class="pub-row">
+    <p class="pub-filter">
+      <button type="button" id="pub-sel-btn" aria-pressed="true" onclick="showPubs('selected')">Selected</button>
+      <span class="sep">/</span>
+      <button type="button" id="pub-all-btn" aria-pressed="false" onclick="showPubs('all')">All</button>
+    </p>
+      <div class="pub-row pub-selected">
         <div class="pub-fig-col"><img src="research/teaser/svfm.png?v=1" alt="" class="paper-image" loading="lazy"></div>
         <div class="pub-text-col">
           <span class="papertitle">Soft-Value Flow Matching for Offline Reinforcement Learning</span>
@@ -191,7 +196,7 @@
           <a href="https://aiclaudev.github.io/SVFM-projectpage/">project page</a>
         </div>
       </div>
-      <div class="pub-row">
+      <div class="pub-row pub-selected">
         <div class="pub-fig-col"><img src="research/teaser/pointmapvla.gif?v=1" alt="" class="paper-image" loading="lazy"></div>
         <div class="pub-text-col">
           <span class="papertitle">PointmapVLA: Scaling Robot Learning with Robot-Centric Pointmaps</span>
@@ -205,7 +210,7 @@
           <a href="https://github.com/DAVIAN-Robotics/PointmapVLA">code</a>
         </div>
       </div>
-      <div class="pub-row">
+      <div class="pub-row pub-selected">
         <div class="pub-fig-col"><img src="research/teaser/procedural.png?v=2" alt="" class="paper-image" loading="lazy"></div>
         <div class="pub-text-col">
           <span class="papertitle">An Agentic Framework for Proactive Robots with Procedural Assistance Memory</span>
@@ -406,6 +411,16 @@
       Template based on <a href="https://jonbarron.info/">Jon Barron's website</a>.
     </p>
   </div>
+<script>
+function showPubs(mode) {
+  document.querySelectorAll('.pub-row').forEach(function (r) {
+    r.style.display = (mode === 'all' || r.classList.contains('pub-selected')) ? '' : 'none';
+  });
+  document.getElementById('pub-sel-btn').setAttribute('aria-pressed', mode === 'selected');
+  document.getElementById('pub-all-btn').setAttribute('aria-pressed', mode === 'all');
+}
+showPubs('selected');
+</script>
 </body>
 
 </html>
