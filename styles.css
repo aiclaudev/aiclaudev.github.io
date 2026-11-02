@@ -129,12 +129,12 @@ h4 {
 
 /* ---- publications and projects ------------------------------------------ */
 
+/* Row and column spacing match godnpeter.github.io so the thumbnails render at the same size (221 x 166 px). */
 .pub-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 26px;
-  margin-bottom: 26px;
+  margin: 26px -15px;
 }
 
 .pub-fig-col {
@@ -143,12 +143,15 @@ h4 {
   max-width: 31%;
   align-items: center;
   justify-content: center;
+  padding-left: 15px;
+  padding-right: 12px;
 }
 
 .pub-text-col {
   flex: 0 0 69%;
   max-width: 69%;
-  padding-left: 18px;
+  padding-left: 12px;
+  padding-right: 15px;
 }
 
 .paper-image {
@@ -236,6 +239,10 @@ h4 {
     display: block;
   }
 
+  .pub-row {
+    margin: 22px 0;
+  }
+
   .pub-fig-col,
   .pub-text-col,
   .entry-logo-col,
@@ -243,6 +250,7 @@ h4 {
     max-width: 100%;
     flex: 0 0 100%;
     padding-left: 0;
+    padding-right: 0;
   }
 
   .paper-image {
