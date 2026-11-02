@@ -363,3 +363,10 @@ h4 {
 .pub-text-col .font-weight-bold {
   white-space: nowrap;
 }
+
+/* corresponding-author dagger: small and raised, level with the equal-contribution asterisk */
+.author-mark {
+  font-size: 0.62em;
+  top: -0.5em;
+  margin-left: 0.5px;
+}
