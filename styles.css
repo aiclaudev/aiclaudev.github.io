@@ -357,3 +357,9 @@ h4 {
 .pub-filter button[aria-pressed="true"] {
   font-weight: 700;
 }
+
+/* keep each author's name on one line */
+.pub-text-col a,
+.pub-text-col .font-weight-bold {
+  white-space: nowrap;
+}
